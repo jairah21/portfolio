@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+        content="Jairah Nicole Carpena — programmer and information technology professional.">
+  <title>Jairah Nicole Carpena | Resume</title>
+
+  <style>
+    :root {
+      --navy: #172b45;
+      --navy-hover: #254467;
+      --text: #243247;
+      --muted: #526175;
+      --background: #f1f4f8;
+      --white: #ffffff;
+      --border: #dce3ec;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 48px 20px;
+      background: var(--background);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+    .page {
+      max-width: 1050px;
+      margin: 0 auto;
+    }
+
+    .resume {
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      overflow: hidden;
+      background: var(--white);
+      border-radius: 12px;
+      box-shadow: 0 12px 40px rgb(23 43 69 / 10%);
+    }
+
+    
+    .sidebar {
+      padding: 32px 28px;
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .portrait {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1 / 1.1;
+      margin-bottom: 36px;
+      object-fit: cover;
+      object-position: center top;
+      border: 3px solid rgb(255 255 255 / 25%);
+      border-radius: 8px;
+    }
+
+    .sidebar section + section {
+      margin-top: 36px;
+    }
+
+    .sidebar h2 {
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgb(255 255 255 / 25%);
+    }
+
+    .contact-item {
+      margin-bottom: 20px;
+    }
+
+    .contact-item h3 {
+      margin: 0 0 4px;
+      font-size: 0.95rem;
+    }
+
+    .contact-item p {
+      margin: 0;
+    }
+
+    .sidebar a {
+      color: inherit;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+
+    
+    .content {
+      min-width: 0;
+      padding: 48px 42px;
+    }
+
+    .header {
+      margin-bottom: 34px;
+      padding-bottom: 28px;
+      border-bottom: 2px solid var(--border);
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--navy);
+      font-size: clamp(1.9rem, 4vw, 2.65rem);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+    }
+
+    .role {
+      margin: 16px 0 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: 1.1rem;
+      line-height: 1.4;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .content section + section {
+      margin-top: 32px;
+    }
+
+    .content h2 {
+      color: var(--navy);
+    }
+
+    .content p,
+    .content li {
+      color: var(--muted);
+    }
+
+    p {
+      margin: 0 0 16px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li + li {
+      margin-top: 10px;
+    }
+
+    strong {
+      font-weight: 700;
+    }
+
+   
+    .bottom-navigation {
+      display: flex;
+      justify-content: center;
+      margin-top: 28px;
+    }
+
+    .home-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 12px 26px;
+      border: 2px solid var(--navy);
+      border-radius: 6px;
+      background: var(--navy);
+      color: var(--white);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      transition: background-color 150ms ease;
+    }
+
+    .home-button:hover {
+      background: var(--navy-hover);
+      border-color: var(--navy-hover);
+    }
+
+    a:focus-visible {
+      outline: 3px solid #3879c6;
+      outline-offset: 5px;
+    }
+
+    .sidebar a:focus-visible {
+      outline-color: white;
+    }
+
+    @media (max-width: 700px) {
+      body {
+        padding: 20px 14px;
+      }
+
+      .resume {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        padding: 30px 24px;
+      }
+
+      .portrait {
+        max-width: 200px;
+      }
+
+      .content {
+        padding: 34px 24px;
+      }
+
+      .home-button {
+        width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .home-button {
+        transition: none;
+      }
+    }
+
+    @media print {
+      body {
+        padding: 0;
+        background: white;
+      }
+
+      .resume {
+        grid-template-columns: 28% minmax(0, 1fr);
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      .sidebar,
+      .content {
+        padding: 24px;
+      }
+
+      .sidebar {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+
+      section {
+        break-inside: avoid;
+      }
+
+      .bottom-navigation {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <main class="resume">
+      <aside class="sidebar" aria-label="Contact information and expertise">
+        <img
+          class="portrait"
+          src="c:\Users\Dell\Downloads\766e280c-6826-4331-ab88-11b8289e9085.jpg"
+          alt="Portrait of Jairah Nicole Carpena"
+          width="224"
+          height="246"
+        >
+
+        <section aria-labelledby="contact-heading">
+          <h2 id="contact-heading">My Contact</h2>
+
+          <div class="contact-item">
+            <h3>Phone</h3>
+            <a href="tel:+639544605531">+63 954 460 5531</a>
+          </div>
+
+          <div class="contact-item">
+            <h3>Email</h3>
+            <a href="mailto:jairahnicolecarpena@gmail.com">
+              jairahnicolecarpena@gmail.com
+            </a>
+          </div>
+
+          <div class="contact-item">
+            <h3>Address</h3>
+            <p>Calumpang, Oslob, Cebu</p>
+          </div>
+        </section>
+
+        <section aria-labelledby="expertise-heading">
+          <h2 id="expertise-heading">Expertise</h2>
+          <ul>
+            <li>Visual design</li>
+            <li>Java</li>
+            <li>C#</li>
+            <li>Web design</li>
+            <li>Python</li>
+            <li>Coding</li>
+          </ul>
+        </section>
+      </aside>
+
+      <article class="content" aria-labelledby="name">
+        <header class="header">
+          <h1 id="name">Jairah Nicole Carpena</h1>
+          <p class="role">Programmer</p>
+        </header>
+
+        <section aria-labelledby="about-heading">
+          <h2 id="about-heading">About Myself</h2>
+          <p>
+            Motivated and detail-oriented Information Technology student at
+            Metro Dumaguete College with a strong foundation in modern digital
+            tools, graphic design, and technical applications. Adept at managing
+            online platforms, digital transactions, and administrative tasks
+            with precision and efficiency. Eager to leverage technical skills,
+            adaptability, and a strong work ethic to contribute effectively as
+            a customer service professional or administrative team member.
+          </p>
+        </section>
+
+        <section aria-labelledby="experience-heading">
+          <h2 id="experience-heading">Experiences</h2>
+          <p>
+            Information Technology Student at Metro Dumaguete College with
+            hands-on academic experience in programming, system logic, and
+            digital tools. Eager to apply strong problem-solving skills,
+            a passion for coding, and technical adaptability to an entry-level
+            technical support or software development role.
+          </p>
+
+          <ul>
+            <li>
+              <strong>Programming Languages:</strong>
+              Python, Java, JavaScript, C++
+            </li>
+            <li>
+              <strong>Web &amp; Tools:</strong>
+              HTML, CSS, Git, VS Code, CapCut, basic database management
+            </li>
+            <li>
+              <strong>Core Competencies:</strong>
+              Logical Problem Solving, Software Debugging,
+              Technical Documentation, UI/Basic Design
+            </li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="summary-heading">
+          <h2 id="summary-heading">Professional Summary</h2>
+          <p>
+            Motivated BS Information Technology graduate with hands-on
+            experience in Arduino-based automation and prototype development.
+            Demonstrated ability in building functional systems from concept
+            to working prototype, with focus on practical solutions like
+            automatic systems. Seeking an entry-level IT position to apply
+            technical and problem-solving skills.
+          </p>
+        </section>
+      </article>
+    </main>
+
+    <nav class="bottom-navigation" aria-label="Return navigation">
+      <a class="home-button" href="navbar.html">
+        <span aria-hidden="true">💗BACK TO HOME💗</span>
+       
+      </a>
+    </nav>
+  </div>
+</body>
+</html>

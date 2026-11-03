@@ -987,7 +987,7 @@ font-family: 'Oswald', sans-serif;
   display: flex;
   align-items: center;
   gap: 15px;
-  background-color: #000000; /* Sleek black background for each contact */
+  background-color: #000000;
   padding: 15px 20px;
   border-radius: 8px;
   margin-bottom: 0;
@@ -996,32 +996,32 @@ font-family: 'Oswald', sans-serif;
 
 .contact-item i {
   font-size: 1.3rem;
-  color: #ff1493; /* Vibrant hot pink icons */
+  color: #ff1493; 
 }
 
 .contact-item h4 {
   margin: 0;
   font-size: 1.1rem;
-  color: #ffffff; /* White text for headings */
+  color: #ffffff; 
 }
 
 .contact-item p, 
 .contact-item a {
   margin: 5px 0 0;
-  color: #cccccc; /* Muted light gray for readable text */
+  color: pink; 
   text-decoration: none;
   transition: color 0.2s;
 }
 
 .contact-item a:hover {
-  color: #ff1493; /* Hot pink hover on links */
+  color: #ff1493; 
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  background-color: #000000; /* Black background for the form */
+  background-color: #000000; 
   padding: 25px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -1033,7 +1033,7 @@ font-family: 'Oswald', sans-serif;
   padding: 12px 15px;
   background-color: #1e1e1e;
   border: 1px solid #333333;
-  color: #ffffff;
+  color:pink;
   border-radius: 8px;
   font-family: inherit;
   box-sizing: border-box;
@@ -1109,10 +1109,10 @@ font-family: 'Oswald', sans-serif;
 }
 
 
-.icon-phone { color: #25D366; }
-.icon-email { color: #EA4335; }
+.icon-phone { color: green; }
+.icon-email { color: red; }
 .icon-instagram { color: #E1306C; }
-.icon-facebook { color: #1877F2; }
+.icon-facebook { color: blue; }
 
 .footer-icon {
   display: block;

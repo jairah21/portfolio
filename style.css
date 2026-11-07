@@ -1144,21 +1144,18 @@ font-family: 'Oswald', sans-serif;
 
 
 
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
  
   .navbar {
     padding: 15px 15px;
     margin-right: 0;
-  }
-  .navbar {
-
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 50;
   display: flex;
-  gap: 10px;
+  gap: 5px;
   flex-wrap: wrap;
 }
   

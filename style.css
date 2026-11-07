@@ -1141,11 +1141,9 @@ font-family: 'Oswald', sans-serif;
   text-decoration: underline;
 }
 
-
-
 @media (max-width: 512px) {
   body {
-    padding-top: 110px; /* Adjusts top padding so your content isn't hidden under the fixed two-row navbar */
+    padding-top: 110px; /* Prevents page content from hiding under the fixed navbar */
   }
 
   .navbar {
@@ -1162,18 +1160,19 @@ font-family: 'Oswald', sans-serif;
     z-index: 50;
     display: flex;
     gap: 4px;
-    padding: 8px 5px;
+    padding: 8px 0;
     box-sizing: border-box;
     background-color: #000;
   }
 
   .logo {
-    gap: 6px;
+    gap: 8px;
+    margin: 0;
   }
 
   .logo-icon {
-    width: 32px;
-    height: 32px;
+    width: 35px;
+    height: 35px;
     font-size: 14px;
   }
 
@@ -1188,33 +1187,51 @@ font-family: 'Oswald', sans-serif;
     letter-spacing: 1px;
   }
 
+  /* Forces navigation links into a single horizontal line that fits smoothly */
   .nav-links {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 !important;
-    padding: 0;
+    padding: 2px 4px;
     gap: 4px;
     width: 100%;
     box-sizing: border-box;
     
-    /* Forces navigation into a clean single line with horizontal swipe if needed */
     flex-wrap: nowrap;
     overflow-x: auto;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    scrollbar-width: none;
   }
 
   .nav-links::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for Chrome, Safari, Opera */
+    display: none;
   }
 
   .nav-links a {
-    padding: 2px 6px;
+    padding: 3px 6px;
     font-size: 9px;
     text-align: center;
     white-space: nowrap;
-    flex-shrink: 0; /* Prevents buttons from squishing */
+    flex-shrink: 0;
+    border-radius: 15px;
+  }
+
+  /* Removes side spacing across all main sections to keep everything flush */
+  .home, 
+  .about-section, 
+  .skills-section, 
+  .gallery-section, 
+  .achievements-section, 
+  .contact-section, 
+  .footer {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    box-sizing: border-box;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
+

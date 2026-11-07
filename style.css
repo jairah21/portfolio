@@ -1235,22 +1235,23 @@ font-family: 'Oswald', sans-serif;
     width: 100%;
     z-index: 50;
     display: flex;
-    gap: 10px;
-    padding: 10px 0;
+    gap: 6px;
+    padding: 6px 0;
     background-color: #000; /* Adjust to match your navbar background color */
   }
 
   .nav-links {
     display: flex;
     justify-content: center;
-    gap: 8px;
+    gap: 5px;
     width: 100%;
   }
 
   .nav-links a {
-    padding: 4px 8px;
-    font-size: 11px;
+    padding: 3px 6px;
+    font-size: 10px;
     text-align: center;
+    white-space: nowrap; /* Keeps link names on a single line */
   }
 }
 

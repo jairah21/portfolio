@@ -1142,61 +1142,58 @@ font-family: 'Oswald', sans-serif;
 }
 
 @media (max-width: 512px) {
+  /* 1. Prevents page content from hiding under the fixed navbar */
   body {
-    padding-top: 110px; /* Prevents page content from hiding under the fixed navbar */
+    padding-top: 105px !important;
   }
 
+  /* 2. Keeps the navbar sticky at the top with zero side gaps */
   .navbar {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 0 !important;
-    margin-right: 0 !important;
-    position: fixed;
+    position: fixed !important;
     top: 0;
     left: 0;
-    width: 100%;
-    max-width: 100%;
-    z-index: 50;
+    width: 100% !important;
+    max-width: 100% !important;
+    z-index: 1000;
     display: flex;
     gap: 4px;
-    padding: 8px 0;
-    box-sizing: border-box;
+    padding: 6px 0 !important;
+    box-sizing: border-box !important;
     background-color: #000;
   }
 
   .logo {
-    gap: 8px;
-    margin: 0;
+    gap: 6px;
+    margin: 0 !important;
   }
 
   .logo-icon {
-    width: 35px;
-    height: 35px;
-    font-size: 14px;
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
   }
 
-  .text-logo {
-    font-size: 14px;
+  .text-logo, .logo-name {
+    font-size: 13px;
     margin-right: 0 !important;
     letter-spacing: 1px;
   }
 
-  .logo-name {
-    font-size: 14px;
-    letter-spacing: 1px;
-  }
-
-  /* Forces navigation links into a single horizontal line that fits smoothly */
+  /* 3. Keeps navigation links in a single clean row that adapts to content width */
   .nav-links {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 !important;
-    padding: 2px 4px;
+    padding: 2px 6px !important;
     gap: 4px;
-    width: 100%;
-    box-sizing: border-box;
+    width: max-content;
+    max-width: 100%;
+    box-sizing: border-box !important;
     
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -1210,15 +1207,15 @@ font-family: 'Oswald', sans-serif;
   }
 
   .nav-links a {
-    padding: 3px 6px;
-    font-size: 9px;
+    padding: 3px 6px !important;
+    font-size: 9px !important;
     text-align: center;
     white-space: nowrap;
     flex-shrink: 0;
     border-radius: 15px;
   }
 
-  /* Removes side spacing across all main sections to keep everything flush */
+  /* 4. Removes side spacing on mobile so everything aligns cleanly */
   .home, 
   .about-section, 
   .skills-section, 
@@ -1228,10 +1225,9 @@ font-family: 'Oswald', sans-serif;
   .footer {
     padding-left: 15px !important;
     padding-right: 15px !important;
-    box-sizing: border-box;
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 }
-

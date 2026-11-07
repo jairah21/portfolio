@@ -1168,6 +1168,7 @@ font-family: 'Oswald', sans-serif;
     overflow-x: auto;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
+    align-items: center;
   }
   .nav-links::-webkit-scrollbar {
     display: none;

@@ -1150,6 +1150,17 @@ font-family: 'Oswald', sans-serif;
     padding: 15px 20px;
     margin-right: 0;
   }
+  .navbar {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
   
   .text-logo, .logo-name {
     margin-right: 0;
@@ -1227,6 +1238,8 @@ font-family: 'Oswald', sans-serif;
     justify-content: center;
     gap: 10px;
   }
+
+
 
  
   .about-content {

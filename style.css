@@ -1144,10 +1144,43 @@ font-family: 'Oswald', sans-serif;
 
 
 
+/* --- GLOBAL FIXES TO PREVENT SIDE SPACING --- */
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  overflow-x: hidden; /* Prevents any accidental horizontal scrolling/spacing */
+  margin: 0;
+  padding: 0;
+}
+
+/* --- STICKY & FIXED NAVBAR (ALL DEVICES) --- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Keeps navbar above all other elements */
+  background-color: #ffffff; /* Change this to match your website's header background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%; /* Uses percentage padding to avoid overflowing on mobile */
+}
+
+/* Add padding to the top of your body/hero section so content doesn't hide behind the fixed navbar */
+body {
+  padding-top: 70px; /* Adjust this value based on your navbar's actual height */
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+
 @media (max-width: 1024px) {
- 
   .navbar {
-    padding: 15px 20px;
+    padding: 15px 4%;
     margin-right: 0;
   }
   
@@ -1163,7 +1196,7 @@ font-family: 'Oswald', sans-serif;
 
   .home {
     justify-content: center;
-    padding: 80px 5% 40px;
+    padding: 60px 4% 40px;
     text-align: center;
   }
   
@@ -1196,6 +1229,8 @@ font-family: 'Oswald', sans-serif;
 
   .home-image img {
     margin-right: 0;
+    max-width: 100%; /* Ensures image doesn't overflow */
+    height: auto;
   }
 
   .achievements-grid {
@@ -1212,14 +1247,12 @@ font-family: 'Oswald', sans-serif;
   }
 }
 
-
 @media (max-width: 768px) {
- 
   .navbar {
     flex-direction: column;
     align-items: center;
-    gap: 15px;
-    position: relative;
+    gap: 10px;
+    padding: 10px 20px;
   }
 
   .nav-links {
@@ -1228,7 +1261,6 @@ font-family: 'Oswald', sans-serif;
     gap: 10px;
   }
 
- 
   .about-content {
     flex-direction: column;
     gap: 30px;

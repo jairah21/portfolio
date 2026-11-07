@@ -1172,10 +1172,8 @@ font-family: 'Oswald', sans-serif;
     padding: 0;
     gap: 6px;
     width: 100%;
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    flex-wrap: nowrap;
+    flex-wrap: wrap; 
+    max-width: 320px; 
   }
 
   .nav-links::-webkit-scrollbar {

@@ -1146,22 +1146,54 @@ font-family: 'Oswald', sans-serif;
    ========================================== */
 
 /* Tablet & Smaller Screens (max-width: 1024px) */
-@media (max-width: 1024px) {
-  /* Navbar & Spacing adjustments */
- .navbar {
-    padding: 15px 20px;
-    margin-right: 0;
-  }
-  
-  .text-logo, .logo-name {
-    margin-right: 0;
-    font-size: 16px;
-  }
-  
-  .nav-links {
-    margin-right: 0;
-    gap: 15px;
-  }
+.navbar { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  background-color: black; 
+  color: aliceblue; 
+  padding: 12px 20px; 
+  border-bottom: 1px solid #000;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  flex-wrap: nowrap;     
+  margin-right: 0;       
+  position: fixed;       
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  box-sizing: border-box; 
+}
+
+.nav-links { 
+  list-style: none; 
+  display: flex; 
+  gap: 10px;                  /* Tighter gap so they fit on one line */
+  margin: 0; 
+  padding: 0; 
+  align-items: center;
+  flex-wrap: nowrap;          /* Forces everything to stay on one single line */
+  overflow-x: auto;          
+  white-space: nowrap;        
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-links::-webkit-scrollbar {
+  display: none;              /* Hides the scrollbar for a clean look */
+}
+
+.nav-links a { 
+  background-color: pink;
+  color: black;
+  letter-spacing: 0.5px;
+  font-size: 9px;             /* Slightly smaller font so all items fit comfortably */
+  font-weight: 800;
+  border-radius: 20px;
+  padding: 5px 8px;
+  text-decoration: none;
+  flex-shrink: 0;             /* Prevents individual buttons from getting squished */
+}
 
   /* Home Section */
   .home {

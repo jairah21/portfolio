@@ -1141,49 +1141,39 @@ font-family: 'Oswald', sans-serif;
   text-decoration: underline;
 }
 
-@media (max-width: 512px) {
+@media (max-width: 900px) {
   .navbar {
+    padding: 12px 20px;
+  }
+
+  .home {
     flex-direction: column;
-    align-items: center;
-    margin-right: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 50;
-    display: flex;
-    gap: 10px;
-    padding: 10px 0;
-    background-color: #000; /* Adjust to match your navbar background color */
-  }
-
-  .nav-links {
-    display: flex;
+    text-align: center;
     justify-content: center;
-    gap: 8px;
-    width: 100%;
+    padding: 40px 5%;
   }
 
-  .nav-links a {
-    padding: 4px 8px;
-    font-size: 11px;
+  .home-left {
+    align-items: center;
+  }
+
+  .home-left h1 .greet,
+  .home-left h1 .name,
+  .home-left h1 .surname {
+    margin-left: 0;
     text-align: center;
   }
-}
 
-  /* 4. Removes side spacing on mobile so everything aligns cleanly */
-  .home, 
-  .about-section, 
-  .skills-section, 
-  .gallery-section, 
-  .achievements-section, 
-  .contact-section, 
-  .footer {
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-    box-sizing: border-box !important;
-    width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+  .home-btns {
+    justify-content: center;
+  }
+
+  .home-image img {
+    margin: 20px 0 0 0;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
   }
 }
+  

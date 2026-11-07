@@ -1166,14 +1166,7 @@ font-family: 'Oswald', sans-serif;
   gap: 20px;
   flex-wrap: nowrap;   /* Keeps all nav items on one line */
   white-space: nowrap;
-   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 50;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap; /* Prevents navigation items from wrapping */
+  position: fixed; /* Prevents navigation items from wrapping */
 }
 
   /* Home Section */

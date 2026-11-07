@@ -1176,11 +1176,12 @@ font-family: 'Oswald', sans-serif;
 
   .nav-links {
     margin: 0 auto;
-    gap: 8px;
+    gap: 6px;
     justify-content: center;
-    flex-wrap: wrap;             /* Allows the links to wrap into 2 lines */
+    flex-wrap: wrap;             /* Allows items to wrap into multiple lines */
     text-align: center;
     width: 100%;
+    max-width: 300px;            /* Restricts width so items naturally break into 2 rows */
     padding-bottom: 4px;
   }
 

@@ -1142,60 +1142,34 @@ font-family: 'Oswald', sans-serif;
 }
 
 
-  .skil
-@ls-container {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .achievements-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 @media (max-width: 900px) {
   .navbar {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 15px;
-    gap: 12px;
+    padding: 10px 15px;
     margin-right: 0;
+    flex-wrap: nowrap;
   }
-
-  .logo {
-    justify-content: center;
-    width: 100%;
-  }
-
   .text-logo {
-    margin-right: 0;
+    margin-right: 15px;
     font-size: 15px;
-    text-align: center;
   }
-
   .logo-name {
     font-size: 15px;
   }
-
- .nav-links {
-    margin: 0 auto;
-    gap: 6px;
-    flex-wrap: nowrap;
+  .nav-links {
+    margin-right: 0;
+    gap: 10px;
     overflow-x: auto;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
-    justify-content: flex-start;
-    padding-bottom: 2px;
-    text-align: center;
   }
-
   .nav-links::-webkit-scrollbar {
     display: none;
   }
-
   .nav-links a {
     font-size: 9px;
-    padding: 4px 8px;
+    padding: 4px 6px;
     flex-shrink: 0;
   }
-}
   .home {
     padding: 110px 5% 50px 5%;
     justify-content: center;

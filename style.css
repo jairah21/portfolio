@@ -1177,7 +1177,7 @@ font-family: 'Oswald', sans-serif;
 
   .nav-links {
     margin: 0 auto;
-    gap: 6px;
+    gap: 10px;
     justify-content: center;
     overflow-x: auto;
     white-space: nowrap;

@@ -1148,23 +1148,29 @@ font-family: 'Oswald', sans-serif;
   .navbar {
     flex-direction: column;
     align-items: center;
-    margin-right: 0;
+    justify-content: center;
+    margin: 0 !important;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw; /* Uses exact viewport width to prevent right-side overflow */
+    max-width: 100%;
     z-index: 50;
     display: flex;
     gap: 6px;
     padding: 6px 0;
+    box-sizing: border-box;
     background-color: #000;
   }
 
   .nav-links {
     display: flex;
     justify-content: center;
+    margin: 0 !important;
+    padding: 0;
     gap: 5px;
     width: 100%;
+    box-sizing: border-box;
   }
 
   .nav-links a {
@@ -1173,7 +1179,7 @@ font-family: 'Oswald', sans-serif;
     text-align: center;
     white-space: nowrap;
   }
-
+}
   .about-content {
     flex-direction: column;
     gap: 30px;

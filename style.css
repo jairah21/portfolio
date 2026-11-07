@@ -1144,84 +1144,6 @@ font-family: 'Oswald', sans-serif;
 
 
 
-@media (max-width: 1000px) {
- 
-  .navbar {
-    padding: 15px 15px;
-    margin-right: 0;
-  }
-  .navbar {
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 50;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-  
-  .text-logo, .logo-name {
-    margin-right: 0;
-    font-size: 16px;
-  }
-  
-  .nav-links {
-    margin-right: 0;
-    gap: 15px;
-  }
-
-  .home {
-    justify-content: center;
-    padding: 80px 5% 40px;
-    text-align: center;
-  }
-  
-  .home-left {
-    align-items: center;
-    max-width: 100%;
-  }
-
-  .home-left h1 .greet,
-  .home-left h1 .name,
-  .home-left h1 .surname {
-    margin-left: 0;
-    text-align: center;
-  }
-
-  .home-left h1 .surname {
-    font-size: 50px;
-  }
-
-  .description {
-    max-width: 100%;
-    margin-right: 0;
-    text-align: center;
-    text-indent: 0;
-  }
-
-  .home-btns {
-    justify-content: center;
-  }
-
-  .home-image img {
-    margin-right: 0;
-  }
-
-  .achievements-grid {
-    grid-template-columns: repeat(2, minmax(220px, 1fr));
-  }
-  
-  .achievements-title,
-  .achievemets-title,
-  .gallery-title {
-    margin-right: 0;
-    padding-right: 0;
-    margin-left: 0;
-    font-size: 32px;
-  }
-}
 
 
 @media (max-width: 512px) {
@@ -1236,7 +1158,7 @@ font-family: 'Oswald', sans-serif;
     z-index: 50;
     display: flex;
     gap: 10px;
-    padding: 10px 0;
+    padding: 5px 0;
     background-color: #000; /* Adjust to match your navbar background color */
   }
 
@@ -1287,7 +1209,7 @@ font-family: 'Oswald', sans-serif;
   .contact-title {
     font-size: 32px;
   }
-}
+
 
 @media (max-width: 480px) {
   .home-left h1 .surname {

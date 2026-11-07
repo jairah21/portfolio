@@ -1147,6 +1147,7 @@ font-family: 'Oswald', sans-serif;
     padding: 10px 15px;
     margin-right: 0;
     flex-wrap: nowrap;
+    justify-content: space-between;
   }
   .text-logo {
     margin-right: 15px;
@@ -1158,21 +1159,25 @@ font-family: 'Oswald', sans-serif;
     text-align: center;
   }
   .nav-links {
-    margin-right: 0;
-    gap: 10px;
+    margin: 0 auto;
+    gap: 12px;
     overflow-x: auto;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
     text-align: center;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .nav-links::-webkit-scrollbar {
     display: none;
   }
   .nav-links a {
-    font-size: 9px;
-    padding: 4px 6px;
+    font-size: 8px;
+    padding: 4px 7px;
     flex-shrink: 0;
   }
+}
   .home {
     padding: 110px 5% 50px 5%;
     justify-content: center;

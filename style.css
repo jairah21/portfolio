@@ -1174,16 +1174,18 @@ font-family: 'Oswald', sans-serif;
     font-size: 15px;
   }
 
-  .nav-links {
+ .nav-links {
     margin: 0 auto;
-    gap: 6px;
+    gap: 12px;                  /* Increased horizontal space between links */
+    row-gap: 5px;               /* Adds nice spacing between the first and second row */
     justify-content: center;
-    flex-wrap: wrap;             /* Allows items to wrap into multiple lines */
+    flex-wrap: wrap;            
     text-align: center;
     width: 100%;
-    max-width: 300px;            /* Restricts width so items naturally break into 2 rows */
+    max-width: 320px;           /* Controls where the second row breaks */
     padding-bottom: 4px;
   }
+
 
   .nav-links::-webkit-scrollbar {
     display: none;

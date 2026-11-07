@@ -1184,6 +1184,7 @@ font-family: 'Oswald', sans-serif;
     width: 100%;
     max-width: 320px;           /* Controls where the second row breaks */
     padding-bottom: 4px;
+    margin-left: 20px;                 /* Adjusts the left margin for better centering */
   }
 
 

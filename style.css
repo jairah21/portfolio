@@ -951,7 +951,7 @@ font-family: 'Oswald', sans-serif;
   letter-spacing: 3px;
   text-transform: uppercase;
   text-align: center;
-  margin-right: 60px;
+  margin-right: 10px;
 }
 
 .contact-title {
@@ -1141,24 +1141,40 @@ font-family: 'Oswald', sans-serif;
   text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-  .navbar {
-    padding: 12px 20px;
-    justify-content: center;
-  }
 
+
+/* ==========================================
+   RESPONSIVE FIXES (Mobile & Tablet Viewports)
+   ========================================== */
+
+/* Tablet & Smaller Screens (max-width: 1024px) */
+@media (max-width: 1024px) {
+  /* Navbar & Spacing adjustments */
+  .navbar {
+    padding: 15px 20px;
+    margin-right: 0;
+  }
+  
   .text-logo, .logo-name {
+    margin-right: 0;
     font-size: 16px;
   }
-
-  .home {
-    padding: 100px 5% 40px 5%;
-    text-align: center;
-    justify-content: center;
+  
+  .nav-links {
+    margin-right: 0;
+    gap: 15px;
   }
 
+  /* Home Section */
+  .home {
+    justify-content: center;
+    padding: 80px 5% 40px;
+    text-align: center;
+  }
+  
   .home-left {
     align-items: center;
+    max-width: 100%;
   }
 
   .home-left h1 .greet,
@@ -1172,22 +1188,105 @@ font-family: 'Oswald', sans-serif;
     font-size: 50px;
   }
 
+  .description {
+    max-width: 100%;
+    margin-right: 0;
+    text-align: center;
+    text-indent: 0;
+  }
+
   .home-btns {
     justify-content: center;
   }
 
   .home-image img {
-    width: 240px;
-    height: 240px;
-    margin: 0;
+    margin-right: 0;
   }
 
+  /* Achievements Grid (4 columns -> 2 columns) */
+  .achievements-grid {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+  }
+  
+  .achievements-title,
+  .achievemets-title,
+  .gallery-title {
+    margin-right: 0;
+    padding-right: 0;
+    margin-left: 0;
+    font-size: 32px;
+  }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Navbar stack fix */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    position: relative; /* un-fix if needed or keep fixed with relative contents */
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  /* About Section Stack */
+  .about-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .about-box {
+    max-width: 100%;
+    padding: 25px;
+  }
+
+  /* Achievements Grid (2 columns -> 1 column) */
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Skills Section auto height adjustment */
+  .skills-section {
+    height: auto;
+    padding: 60px 20px;
+  }
+
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact Form Grid */
   .contact-container {
     grid-template-columns: 1fr;
   }
 
-  .carousel-group img {
-    width: 200px;
-    height: 260px;
+  .contact-title {
+    font-size: 32px;
+  }
+}
+
+/* Extra Small Phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .home-left h1 .surname {
+    font-size: 40px;
+  }
+
+  .home-left h1 .name {
+    font-size: 24px;
+  }
+
+  .home-btns {
+    gap: 15px;
+  }
+
+  .home-btns a {
+    min-width: 90px;
+    padding: 6px 8px;
+    font-size: 10px;
   }
 }

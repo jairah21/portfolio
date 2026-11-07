@@ -1177,12 +1177,12 @@ font-family: 'Oswald', sans-serif;
 
   .nav-links {
     margin: 0 auto;
-    gap: 10px;
+    gap: 8px;
     justify-content: center;
     overflow-x: auto;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
-    width: 100%;
+    width: 90%;
     padding-bottom: 4px;
   }
 

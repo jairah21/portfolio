@@ -1245,6 +1245,7 @@ font-family: 'Oswald', sans-serif;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
+    margin-right: 20;
   }
 
 

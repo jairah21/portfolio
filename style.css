@@ -1148,26 +1148,20 @@ font-family: 'Oswald', sans-serif;
 /* Tablet & Smaller Screens (max-width: 1024px) */
 @media (max-width: 1024px) {
   /* Navbar & Spacing adjustments */
-  .navbar {
-  padding: 15px 40px; /* Increased right/left padding to create space on the sides */
-  margin-right: 0;
-  flex-wrap: nowrap;
-     /* Forces the logo and links to stay on one single line */
-}
-
-.text-logo, .logo-name {
-  margin-right: 20px;  /* Adds a clean gap between your logo and the links */
-  font-size: 16px;
-  white-space: nowrap; /* Prevents text from breaking into two lines */
-}
-
-.nav-links {
-  margin-right: 0;
-  gap: 20px;
-  flex-wrap: nowrap;   /* Keeps all nav items on one line */
-  white-space: nowrap;
-  position: fixed; /* Prevents navigation items from wrapping */
-}
+ .navbar {
+    padding: 15px 20px;
+    margin-right: 0;
+  }
+  
+  .text-logo, .logo-name {
+    margin-right: 0;
+    font-size: 16px;
+  }
+  
+  .nav-links {
+    margin-right: 0;
+    gap: 15px;
+  }
 
   /* Home Section */
   .home {

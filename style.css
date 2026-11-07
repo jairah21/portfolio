@@ -1148,7 +1148,7 @@ font-family: 'Oswald', sans-serif;
 /* Tablet & Smaller Screens (max-width: 1024px) */
 @media (max-width: 1024px) {
   /* Navbar & Spacing adjustments */
- .navbar {
+  .navbar {
     padding: 15px 20px;
     margin-right: 0;
   }

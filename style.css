@@ -1144,55 +1144,86 @@ font-family: 'Oswald', sans-serif;
 
 
 
+/* Prevent padding and borders from adding extra width */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
 @media (max-width: 512px) {
   .navbar {
-    flex-direction: column;
-    align-items: center;
-    margin: 0 !important;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    right: 0;
     z-index: 50;
+
     display: flex;
-    gap: 6px;
-    padding: 8px 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 10px 0;
     background-color: #000;
-    box-sizing: border-box;
   }
 
   .nav-links {
     display: flex;
+    align-items: stretch;
     justify-content: center;
-    margin: 0 !important;
-    padding: 0 10px;
-    gap: 5px;
+    gap: 0;
+
     width: 100%;
-    box-sizing: border-box;
-    flex-wrap: wrap;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  /* Supports links wrapped in list items */
+  .nav-links > li {
+    display: flex;
+    flex: 1 1 0;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
   }
 
   .nav-links a {
-    padding: 3px 6px;
-    font-size: 10px;
+    display: flex;
+    flex: 1 1 0;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 0;
+    margin: 0;
+    padding: 8px 4px;
+
+    font-size: 11px;
     text-align: center;
-    white-space: nowrap;
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
 
-  /* General mobile container adjustments to prevent side-spacing */
-  .home, 
-  .about-section, 
-  .skills-section, 
-  .gallery-section, 
-  .achievements-section, 
-  .contact-section, 
-  .footer {
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-    box-sizing: border-box;
+  .about-content,
+  .achievements-grid,
+  .skills-container,
+  .contact-container {
     width: 100%;
-    margin-left: 0;
-    margin-right: 0;
+    max-width: 100%;
+    min-width: 0;
+    margin-inline: 0;
   }
 
   .about-content {
@@ -1201,28 +1232,24 @@ font-family: 'Oswald', sans-serif;
   }
 
   .about-box {
+    width: 100%;
     max-width: 100%;
+    min-width: 0;
     padding: 25px;
-    box-sizing: border-box;
   }
 
-  .achievements-grid {
-    grid-template-columns: 1fr;
+  .achievements-grid,
+  .skills-container,
+  .contact-container {
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .skills-section {
+    width: 100%;
+    max-width: none;
     height: auto;
-    padding: 60px 15px;
-  }
-
-  .skills-container {
-    grid-template-columns: 1fr;
-    width: 100%;
-  }
-
-  .contact-container {
-    grid-template-columns: 1fr;
-    width: 100%;
+    margin-inline: 0;
+    padding: 60px 20px;
   }
 
   .contact-title {
@@ -1240,6 +1267,8 @@ font-family: 'Oswald', sans-serif;
   }
 
   .home-btns {
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 15px;
   }
 
@@ -1247,5 +1276,6 @@ font-family: 'Oswald', sans-serif;
     min-width: 90px;
     padding: 6px 8px;
     font-size: 10px;
+    text-align: center;
   }
 }

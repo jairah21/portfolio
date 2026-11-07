@@ -1176,17 +1176,15 @@ font-family: 'Oswald', sans-serif;
 
  .nav-links {
     margin: 0 auto;
-    gap: 12px;                  /* Increased horizontal space between links */
-    row-gap: 5px;               /* Adds nice spacing between the first and second row */
-    justify-content: center;
-    flex-wrap: wrap;            
+    gap: 6px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start;
+    padding-bottom: 2px;
     text-align: center;
-    width: 100%;
-    max-width: 320px;           /* Controls where the second row breaks */
-    padding-bottom: 4px;
-    margin-left: 20px;                 /* Adjusts the left margin for better centering */
   }
-
 
   .nav-links::-webkit-scrollbar {
     display: none;

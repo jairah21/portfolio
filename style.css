@@ -1150,7 +1150,6 @@ font-family: 'Oswald', sans-serif;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 @media (max-width: 900px) {
-  @media (max-width: 900px) {
   .navbar {
     flex-direction: column;
     align-items: center;
@@ -1177,14 +1176,12 @@ font-family: 'Oswald', sans-serif;
 
   .nav-links {
     margin: 0 auto;
-    gap: 6px;                 
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
+    gap: 8px;
     justify-content: center;
+    flex-wrap: wrap;             /* Allows the links to wrap into 2 lines */
+    text-align: center;
     width: 100%;
-    padding-bottom: 2px;
+    padding-bottom: 4px;
   }
 
   .nav-links::-webkit-scrollbar {
@@ -1193,7 +1190,7 @@ font-family: 'Oswald', sans-serif;
 
   .nav-links a {
     font-size: 9px;
-    padding: 4px 6px;
+    padding: 4px 8px;
     flex-shrink: 0;
   }
 }

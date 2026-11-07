@@ -1221,16 +1221,29 @@ font-family: 'Oswald', sans-serif;
   }
   .about-content {
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
   }
   .about-box {
-    max-width: 100%;
+    max-width: 90%;
+    padding: 25px;
+  }
+  .about-image img {
+    width: 210px;
+    height: 240px;
   }
   .skills-container {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+  .skill-card {
+    padding: 18px;
   }
   .achievements-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+  .achievement-card img {
+    height: 180px;
   }
   .achievements-title,
   .achievemets-title,
@@ -1245,8 +1258,8 @@ font-family: 'Oswald', sans-serif;
     padding-right: 18px;
   }
   .carousel-group img {
-    width: 220px;
-    height: 290px;
+    width: 200px;
+    height: 260px;
   }
 }
 
@@ -1270,8 +1283,18 @@ font-family: 'Oswald', sans-serif;
   .skills-container {
     grid-template-columns: 1fr;
   }
+  .about-box {
+    padding: 20px;
+  }
+  .about-image img {
+    width: 180px;
+    height: 205px;
+  }
   .achievements-grid {
     grid-template-columns: 1fr;
+  }
+  .achievement-card img {
+    height: 160px;
   }
   .gallery-section {
     min-height: 460px;
@@ -1282,8 +1305,8 @@ font-family: 'Oswald', sans-serif;
     padding-right: 14px;
   }
   .carousel-group img {
-    width: 180px;
-    height: 240px;
+    width: 160px;
+    height: 210px;
   }
   .carousel-track {
     animation-duration: 22s;

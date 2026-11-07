@@ -1144,49 +1144,51 @@ font-family: 'Oswald', sans-serif;
 
 
 
-@media (max-width: 512px) {
-  body {
-    padding-top: 90px; /* Adjusts top padding for smaller mobile screens */
-  }
-
+@media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    margin: 0;
-    z-index: 50;
-    display: flex;
-    gap: 6px;
-    padding: 6px 0;
+    z-index: 1000;
+
+    /* Keep items in a single horizontal row */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    /* Prevent overflow on small screens */
+    padding: 10px 15px;
     box-sizing: border-box;
-    background-color: #000;
   }
 
-  .text-logo {
-    margin-right: 0 !important;
+  body {
+    padding-top: 60px;
   }
 
   .nav-links {
-    display: flex;
-    justify-content: center;
-    margin: 0 !important;
-    padding: 0;
-    gap: 5px;
-    width: 100%;
-    box-sizing: border-box;
+    
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+    justify-content: flex-start;
+    gap: 12px;
+    
+    
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
   }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
 
   .nav-links a {
-    padding: 3px 6px;
-    font-size: 10px;
-    text-align: center;
-    white-space: nowrap;
+    font-size: 13px;
+    flex-shrink: 0; 
   }
-
+}
   .about-content {
     flex-direction: column;
     gap: 30px;

@@ -1262,6 +1262,7 @@ font-family: 'Oswald', sans-serif;
   .carousel-group img {
     width: 200px;
     height: 260px;
+    border:1px solid hotpink;
   }
 }
 
